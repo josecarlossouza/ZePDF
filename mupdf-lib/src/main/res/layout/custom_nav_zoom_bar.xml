@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customNavBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolbar"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <!-- Left side: Page navigation -->
+    <LinearLayout
+        android:id="@+id/pageNavContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/pagePrevButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_chevron_left_white_24dp"
+            android:contentDescription="@string/previous_page"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/pageNavText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="1 / 12"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:minWidth="80dp"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/pageNextButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_chevron_right_white_24dp"
+            android:contentDescription="@string/next_page"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
+    <!-- Right side: Zoom controls -->
+    <LinearLayout
+        android:id="@+id/zoomContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/zoomOutButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_zoom_out_white_24dp"
+            android:contentDescription="@string/zoom_out"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/zoomLevelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="100%"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:minWidth="60dp"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/zoomInButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button"
+            android:src="@drawable/ic_zoom_in_white_24dp"
+            android:contentDescription="@string/zoom_in"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

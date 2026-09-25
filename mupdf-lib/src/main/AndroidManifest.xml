@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application
+		android:allowBackup="false"
+		android:largeHeap="true"
+		android:supportsRtl="true"
+		>
+		<activity
+			android:name=".DocumentActivity"
+			android:configChanges="keyboard|keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation|uiMode"
+			android:windowSoftInputMode="stateHidden|adjustNothing"
+			android:exported="false"
+			android:theme="@style/Theme.MyApp"
+			>
+		</activity>
+		<activity
+			android:name=".OutlineActivity"
+			android:configChanges="keyboard|keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation|uiMode"
+			android:parentActivityName=".DocumentActivity"
+			>
+		</activity>
+		<activity
+			android:name=".HelpActivity"
+			android:configChanges="keyboard|keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation|uiMode"
+			android:parentActivityName=".DocumentActivity"
+			>
+		</activity>
+	</application>
+</manifest>
